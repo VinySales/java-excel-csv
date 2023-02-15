@@ -14,6 +14,7 @@ import model.entities.Product;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		String path = "c:\\temp\\Pasta1.csv";
 		File file = new File(path);
 		
@@ -28,7 +29,6 @@ public class Main {
 			String line = br.readLine();
 			
 			while (line != null) {
-				
 				String name = line.split(",")[0];
 				double value = Double.parseDouble(line.split(",")[1]);
 				int quantity = Integer.parseInt(line.split(",")[2]);
@@ -37,7 +37,6 @@ public class Main {
 				
 				line = br.readLine();
 			}
-			
 		} catch (IOException e) {
 			System.out.println("Error " + e.getMessage());
 		}
